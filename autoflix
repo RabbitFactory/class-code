@@ -1,0 +1,55 @@
+
+/*    *****AUTOFLIX*****    */
+
+#include <iostream>
+#include<fstream>
+using namespace std;
+
+int main() {
+    cout <<
+        "1. Action Movies"     <<endl<<
+        "2. Horror Movies"     <<endl<<
+        "3. Comedy Movies"     <<endl<<
+        "4. Thriller Movies"   <<endl<<
+        "5. Mystery Movies"    <<endl<<
+        "6. Si-Fi Movies"      <<endl<<
+        "7. War Movies"        <<endl<<
+
+        "Select Catagory: "    <<endl;
+
+  int Catagory;
+  cin >> Catagory;
+  switch (Catagory) {
+  case 1:
+    cout << "Action Movies: "<<endl;
+    break;
+  case 2:
+    cout << "Horror Movies: "<<endl;
+    break;
+  case 3:
+    cout << "Comedy Movies: "<<endl;
+    break;
+  case 4:
+    cout << "Thriller Movies: "<<endl;
+    break;
+  case 5:
+    cout << "Mystery Movies: "<<endl;
+    break;
+  case 6:
+    cout << "Si-Fi Movies: "<<endl;
+    break;
+  case 7:
+    cout << "War Movies: "<<endl;
+    break;
+  }
+
+  string movieNames;
+  ifstream readfile("data.txt");
+while(getline(readfile,movieNames))
+{
+    cout<<movieNames;
+}
+readfile.close();
+
+  return 0;
+}
